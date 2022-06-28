@@ -1,0 +1,14 @@
+# https://jfischoff.github.io/blog/making-nfts-with-plutus.html
+# https://github.com/jfischoff/plutus-nft
+
+# in the adamint-build-contracts:
+cabal build
+cabal run script-compiler-plutus-exe
+cabal install cardano-cli
+# /home/plutus/.cabal/bin/cardano-cli transaction policyid --script-file scripts/ft-mint-policy.plutus
+# /home/plutus/.cabal/bin/cardano-cli transaction policyid --script-file scripts/nft-mint-policy.plutus
+
+export PATH="$HOME/.cabal/bin:$PATH"
+
+cardano-cli transaction policyid --script-file scripts/ft-mint-policy.plutus
+cardano-cli transaction policyid --script-file scripts/nft-mint-policy.plutus

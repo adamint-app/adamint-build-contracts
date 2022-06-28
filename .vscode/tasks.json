@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "copy_jsapi",
+			"path": "dist-newstyle/src/cardano-a_-ee9be5d4fc9509d5/jsapi/",
+			"problemMatcher": [],
+			"label": "npm: copy_jsapi - dist-newstyle/src/cardano-a_-ee9be5d4fc9509d5/jsapi",
+			"detail": "test -n \"$CARDANO_ADDRESSES_JS\" && cp --no-preserve=all -v $CARDANO_ADDRESSES_JS/*.js dist || true"
+		}
+	]
+}
